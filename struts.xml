@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="default" extends="struts-default" namespace="/">  
+
+<!--   @@@@@@@@@@  Public Pages    @@@@@@@@@@  -->
+<action name="homepage">  
+<result name="success">WEB-INF/master/homepage.jsp</result>
+</action>
+
+<action name="login">  
+<result name="success">WEB-INF/master/login.jsp</result>
+</action>
+
+<action name="invoice">  
+<result name="success">WEB-INF/master/invoice.jsp</result>
+</action>
+
+<action name="stockreport">  
+<result name="success">WEB-INF/master/stockreport.jsp</result>
+</action>
+<action name="stock">  
+<result name="success">WEB-INF/master/stock.jsp</result>
+</action>
+
+<action name="stockInsert" class="master.insertstock"> 
+<result name="input">WEB-INF/master/stock.jsp</result>
+<result name="success" type="redirect">stock</result>
+<result name="error">WEB-INF/master/stock.jsp</result>
+</action> 
+
+<action name="stockUpdate" class="master.updatestock"> 
+<result name="input">WEB-INF/master/stock.jsp</result>
+<result name="success" type="redirect">stock</result>
+<result name="error">WEB-INF/master/stock.jsp</result>
+</action>
+
+<action name="stockDelete" class="master.deletestock"> 
+<result name="input">WEB-INF/master/stock.jsp</result>
+<result name="success" type="redirect">stock</result>
+<result name="error">WEB-INF/master/stock.jsp</result>
+</action>
+
+
+<action name="companymaster">  
+<result name="success">WEB-INF/master/companymaster.jsp</result>
+</action>
+
+<action name="companymasterInsert" class="master.insertcompany"> 
+<result name="input">WEB-INF/master/companymaster.jsp</result>
+<result name="success" type="redirect">companymaster</result>
+<result name="error">WEB-INF/master/companymaster.jsp</result>
+</action> 
+
+<action name="companymasterUpdate" class="master.updatecompanymaster"> 
+<result name="input">WEB-INF/master/companymaster.jsp</result>
+<result name="success" type="redirect">companymaster</result>
+<result name="error">WEB-INF/master/companymaster.jsp</result>
+</action>
+
+<action name="companymasterDelete" class="master.deletecompany"> 
+<result name="input">WEB-INF/master/companymaster.jsp</result>
+<result name="success" type="redirect">companymaster</result>
+<result name="error">WEB-INF/master/companymaster.jsp</result>
+</action>
+
+<action name="product">  
+<result name="success">WEB-INF/master/product.jsp</result>
+</action>
+
+<action name="productInsert" class="master.insertproduct"> 
+<result name="input">WEB-INF/master/product.jsp</result>
+<result name="success" type="redirect">product</result>
+<result name="error">WEB-INF/master/product.jsp</result>
+</action> 
+
+<action name="productUpdate" class="master.updateproduct"> 
+<result name="input">WEB-INF/master/product.jsp</result>
+<result name="success" type="redirect">product</result>
+<result name="error">WEB-INF/master/product.jsp</result>
+</action>
+
+<action name="productDelete" class="master.deleteproduct"> 
+<result name="input">WEB-INF/master/product.jsp</result>
+<result name="success" type="redirect">product</result>
+<result name="error">WEB-INF/master/product.jsp</result>
+</action>
+
+<action name="vendor">  
+<result name="success">WEB-INF/master/vendor.jsp</result>
+</action>
+
+<action name="vendorInsert" class="master.insertvendor"> 
+<result name="input">WEB-INF/master/vendor.jsp</result>
+<result name="success" type="redirect">vendor</result>
+<result name="error">WEB-INF/master/vendor.jsp</result>
+</action> 
+
+<action name="vendorUpdate" class="master.updatevendor"> 
+<result name="input">WEB-INF/master/vendor.jsp</result>
+<result name="success" type="redirect">vendor</result>
+<result name="error">WEB-INF/master/vendor.jsp</result>
+</action>
+
+<action name="vendorDelete" class="master.deletevendor"> 
+<result name="input">WEB-INF/master/vendor.jsp</result>
+<result name="success" type="redirect">vendor</result>
+<result name="error">WEB-INF/master/vendor.jsp</result>
+</action>
+<action name="customer">  
+<result name="success">WEB-INF/master/customer.jsp</result>
+</action>
+
+<action name="customerInsert" class="master.insertcustomer"> 
+<result name="input">WEB-INF/master/customer.jsp</result>
+<result name="success" type="redirect">customer</result>
+<result name="error">WEB-INF/master/customer.jsp</result>
+</action> 
+
+<action name="customerUpdate" class="master.updatecustomer"> 
+<result name="input">WEB-INF/master/customer.jsp</result>
+<result name="success" type="redirect">customer</result>
+<result name="error">WEB-INF/master/customer.jsp</result>
+</action>
+
+<action name="customerDelete" class="master.deletecustomer"> 
+<result name="input">WEB-INF/master/customer.jsp</result>
+<result name="success" type="redirect">customer</result>
+<result name="error">WEB-INF/master/customer.jsp</result>
+</action>
+<action name="employee">  
+<result name="success">WEB-INF/master/employee.jsp</result>
+</action>
+
+<action name="employeeInsert" class="master.insertemployee"> 
+<result name="input">WEB-INF/master/employee.jsp</result>
+<result name="success" type="redirect">employee</result>
+<result name="error">WEB-INF/master/employee.jsp</result>
+</action> 
+
+<action name="employeeUpdate" class="master.updateemployee"> 
+<result name="input">WEB-INF/master/employee.jsp</result>
+<result name="success" type="redirect">employee</result>
+<result name="error">WEB-INF/master/employee.jsp</result>
+</action>
+
+<action name="employeeDelete" class="master.deleteemployee"> 
+<result name="input">WEB-INF/master/employee.jsp</result>
+<result name="success" type="redirect">employee</result>
+<result name="error">WEB-INF/master/employee.jsp</result>
+</action>
+
+<action name="sales">  
+<result name="success">WEB-INF/master/sales.jsp</result>
+</action>
+
+<action name="salesInsert" class="master.insertsales"> 
+<result name="input">WEB-INF/master/sales.jsp</result>
+<result name="success" type="redirect">sales</result>
+<result name="error">WEB-INF/master/sales.jsp</result>
+</action> 
+
+<action name="salesUpdate" class="master.updatesales"> 
+<result name="input">WEB-INF/master/sales.jsp</result>
+<result name="success" type="redirect">sales</result>
+<result name="error">WEB-INF/master/sales.jsp</result>
+</action>
+
+<action name="salesDelete" class="master.deletesales"> 
+<result name="input">WEB-INF/master/sales.jsp</result>
+<result name="success" type="redirect">sales</result>
+<result name="error">WEB-INF/master/sales.jsp</result>
+</action>
+<action name="taxmaster">  
+<result name="success">WEB-INF/master/taxmaster.jsp</result>
+</action>
+
+<action name="taxmasterInsert" class="master.inserttax"> 
+<result name="input">WEB-INF/master/taxmaster.jsp</result>
+<result name="success" type="redirect">taxmaster</result>
+<result name="error">WEB-INF/master/taxmaster.jsp</result>
+</action> 
+
+<action name="taxmasterUpdate" class="master.updatetax"> 
+<result name="input">WEB-INF/master/taxmaster.jsp</result>
+<result name="success" type="redirect">taxmaster</result>
+<result name="error">WEB-INF/master/taxmaster.jsp</result>
+</action>
+
+<action name="taxmasterDelete" class="master.deletetax"> 
+<result name="input">WEB-INF/master/taxmaster.jsp</result>
+<result name="success" type="redirect">taxmaster</result>
+<result name="error">WEB-INF/master/taxmaster.jsp</result>
+</action>
+
+
+<action name="attendance">  
+<result name="success">WEB-INF/master/attendance.jsp</result>
+</action>
+<action name="attendanceInsert" class="master.insertattendance"> 
+<result name="input">WEB-INF/master/attendance.jsp</result>
+<result name="success" type="redirect">attendance</result>
+<result name="error">WEB-INF/master/attendance.jsp</result>
+</action> 
+
+<action name="attendanceUpdate" class="master.updateattendance"> 
+<result name="input">WEB-INF/master/attendance.jsp</result>
+<result name="success" type="redirect">attendance</result>
+<result name="error">WEB-INF/master/attendance.jsp</result>
+</action>
+
+<action name="attendanceDelete" class="master.deleteattendance"> 
+<result name="input">WEB-INF/master/attendance.jsp</result>
+<result name="success" type="redirect">attendance</result>
+<result name="error">WEB-INF/master/attendance.jsp</result>
+</action>
+<action name="Product Report">  
+<result name="success">WEB-INF/master/Product Report.jsp</result>
+</action>
+<action name="company report">  
+<result name="success">WEB-INF/master/company report.jsp</result>
+</action>
+<action name="vendor report">  
+<result name="success">WEB-INF/master/vendor report.jsp</result>
+</action>
+<action name="customer report">  
+<result name="success">WEB-INF/master/customer report.jsp</result>
+</action>
+<action name="employee report">  
+<result name="success">WEB-INF/master/employee report.jsp</result>
+</action>
+<action name="attendance report">  
+<result name="success">WEB-INF/master/attendance report.jsp</result>
+</action>
+<action name="sales report">  
+<result name="success">WEB-INF/master/sales report.jsp</result>
+</action>
+
+<action name="dashboard">  
+<result name="success">WEB-INF/master/dashboard.jsp</result>
+</action>
+
+<!--   @@@@@@@@@@  Master Pages    @@@@@@@@@@  -->
+
+<!-- 
+<action name="SchemeMaster">  
+<result name="success">WEB-INF/master/scheme.jsp</result>
+</action> 
+
+<action name="SchemeMasterInsert" class="master.InsertSchemeMaster"> 
+<result name="input">WEB-INF/master/scheme.jsp</result>
+<result name="success" type="redirect">SchemeMaster</result>
+<result name="error">WEB-INF/master/scheme.jsp</result>
+</action> 
+
+<action name="SchemeMasterUpdate" class="master.UpdateSchemeMaster"> 
+<result name="input">WEB-INF/master/scheme.jsp</result>
+<result name="success" type="redirect">SchemeMaster</result>
+<result name="error">WEB-INF/master/scheme.jsp</result>
+</action>
+
+<action name="SchemeMasterDelete" class="master.DeleteSchemeMaster"> 
+<result name="input">WEB-INF/master/scheme.jsp</result>
+<result name="success" type="redirect">SchemeMaster</result>
+<result name="error">WEB-INF/master/scheme.jsp</result>
+</action>
+ -->
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.4316796498983!2d79.08900711493375!3d21.095349285962275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf86af6f0dd7%3A0xab9995ac1c10a4c2!2sCubentiq!5e0!3m2!1sen!2sin!4v1606978340148!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+ -->
+<!-- <constant name="struts.action.excludePattern" value="/SchemeServlet"></constant> -->  <!-- you can initialize servlet here -->
+
+</package>
+</struts>
